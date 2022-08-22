@@ -8,6 +8,48 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+    <div>
+        <h3>View High Scores</h3>
+    </div>
+
+    <div>
+        Return to Quiz
+    </div>
+
+    <div>
+        <h3> Time: 0</h3>
+    </div>
+
+    <div id="quiz-area">
+        <div id="start-quiz">
+            <h2> Coding Quiz</h2>
+            <p>Try to answer the following code related questions within the time limit. Keep in mind that an incorrect answer will penalize your score/time by 10 seconds! Click the Start Quiz button below to beign. </p>
+            <button class="btn" id="start-btn">Start Quiz</button>
+        </div>
+        
+    <div class="hide">
+        <h3></h3>
+    </div>
+    </div>
+
+    <div>
+        <div>
+            <div>
+                <h2>Congrats! You Finished the Quiz!</h2>
+                <p> Enter your initials</p>
+                <textarea rows="1" cols="10" placeholder="ABC" id="enter-initials"></textarea>
+                <br>
+                <button class="btn" id="submit-initials">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div id="high-scores" class="hide">
+        <h2>High Scores</h2>
+        <div id="initials-div"></div>
+        <div id="score-div"></div>
+    </div>
+
     <script src="./assets/js/script.js"></script> 
+    <script src="./assets/js/questions-list.js"></script> 
 </body>
 </html>

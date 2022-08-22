@@ -1,0 +1,53 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+#quiz-area {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: 100px;
+    overflow: hidden;
+
+}
+
+textarea {
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+    resize: none;
+}
+
+.btn {
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: blue
+}

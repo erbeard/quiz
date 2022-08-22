@@ -1,73 +1,27 @@
-*, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        
+        #wrapper {
+            position: absolute;
+            left: 30%;
+            top: 20%;
+            width: 500px;
+            height: 500px;
+            padding: 10px;
+            border: 5px solid blue;
+            border-radius: 15px;
+        }
+        #startQuiz {
+            background-color: blue;
+            margin-left: 33%;
+            padding: 15px 32px;
+            font-size: 20px;
+            color: white;
+            border-radius: 15px;
 
-a {
-    color: black;
-  }
+        }
+        #questions {
+            margin: 20px;
+        }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-}
-
-.hide {
-    display: none;
-}
-
-#quiz-area {
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    margin: 0 auto;
-    position: relative;
-    text-align: center;
-    top: 100px;
-    overflow: hidden;
-
-}
-
-textarea {
-    padding: 5px;
-    margin: 5px;
-    font-size: 20px;
-    text-align: center;
-    resize: none;
-}
-
-.btn {
-    background-color: blue;
-    color: white;
-    font-size: 20px;
-    border-radius: 10px;
-    outline: none;
-    padding: 10px;
-    margin: 10px;
-}
-
-.btn:hover {
-    background-color: transparent;
-    color: blue
-}
-
-#score-leaders {
-    margin: 10px;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-#countdown-timer {
-    margin: 10px;  
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    right: 0;
-}
+        #countdown-timer {
+            float: right;
+        }

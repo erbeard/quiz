@@ -18,10 +18,43 @@
             border-radius: 15px;
 
         }
-        #questions {
+        #questionsDiv {
             margin: 20px;
         }
 
         #countdown-timer {
             float: right;
         }
+
+        #createDiv {
+            margin-top: 20px;
+            border-top: 1px solid lightgray;
+        }
+
+        input {
+            margin-bottom: 20px;
+            width: 50%;
+            border: 1px solid lightgray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        li {
+            background-color: blue;
+            margin-top: 10px;
+            padding: 5px 15px;
+            width: 80%;
+            font-size: 18px;
+            color: white;
+        }
+
+        #Submit {
+            background-color: blue;
+            margin-left: 33%;
+            padding: 15px 32px;
+            font-size: 20px;
+            color: white;
+        }
+

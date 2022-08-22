@@ -7,7 +7,7 @@ var penalty = 10;
 
 var currentTime = document.querySelector("#countdown-timer")
 var timer = document.querySelector("#startQuiz")
-var questions = document.querySelector("#questions");
+var questionsDiv = document.querySelector("#questionsDiv");
 var wrapper = document.querySelector("#wrapper");
 var ulCreate = document.createElement("ul");
 
@@ -16,7 +16,7 @@ var ulCreate = document.createElement("ul");
 var questions = [
     {
         question: '______ tag is an extension to HTML that can enclose any number of JavaScript statements.',
-        choices: ['<script>','<body>','<head>','<title>'],
+        answers: ['<script>','<body>','<head>','<title>'],
         answer: '<script>'
     }, {
         question: 'Which of the following best describes JavaScript?',
@@ -57,3 +57,50 @@ timer.addEventListener("click", function() {
     }
     render(questionsIndex);
 });
+
+//Renders Questions to Page
+    function render(questionIndex) { 
+        questionsDiv.innerHTML = "";
+        ulCreate.innerHTML = "";
+
+        for (var i = 0; i < questions.length; i++) {
+            var userQuestion = questions[questionIndex].question;
+            var userAnswers = questions[questionIndex].answers;
+            questionsDiv.textContent = userQuestion;
+        }
+        userAnswers.forEach(function (newItem) {
+            var listItem = document.createElement("li");
+            listItem.textContent = newItem;
+            questionsDiv.appendChild(ulCreate);
+            ulCreate.appendChild(listItem);
+            listItem.addEventListener("click", (compare));
+        })
+    }
+
+//Compare Choices to Answers
+function compare(event) {
+    var element = event.target;
+
+    if (element.matches("li")) {
+
+        var createDiv = document.createElement("div");
+
+        if (element.textContent == questions[questionsIndex].answer) {
+            score++;
+            createDiv.textContent = "Correct";
+        } else {
+            secondsRemaining = secondsRemaining - penalty;
+            createDiv.textContent = "Incorrect! The correct answer is: " + questions[questionsIndex].answer;
+        }
+    }
+
+    questionsIndex++;
+
+    if (questionsIndex >= questions.length) {
+        quizComplete();
+        createDiv.textContent = "End of Quiz" + " " + "You got  " + score + "/" + questions.length + " Correct!";
+    } else {
+        render(questionIndex);
+    }
+    questionsDiv.appendChild(createDiv);
+}

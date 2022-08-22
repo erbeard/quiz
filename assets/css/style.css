@@ -51,3 +51,19 @@ textarea {
     background-color: transparent;
     color: blue
 }
+
+#score-leaders {
+    margin: 10px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#countdown-timer {
+    margin: 10px;  
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}

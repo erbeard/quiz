@@ -60,7 +60,8 @@ li {
 }
 
 #goBack {
-    background-color: purple;
+    background-color: blue
+    ;
     position: relative;
     padding: 10px;
     font-size: 20px;
@@ -75,7 +76,7 @@ li {
 
 
 #clear {
-    background-color: purple;
+    background-color: blue;
     position: relative;
     padding: 10px;
      font-size: 20px;

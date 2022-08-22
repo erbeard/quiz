@@ -15,9 +15,9 @@ var ulCreate = document.createElement("ul");
 
 var questions = [
     {
-        question: '______ tag is an extension to HTML that can enclose any number of JavaScript statements.',
-        answers: ['<script>','<body>','<head>','<title>'],
-        answer: '<script>'
+        question: "______ tag is an extension to HTML that can enclose any number of JavaScript statements.",
+        answers: ["<script>","<body>","<head>","<title>"],
+        answer: "<script>"
     }, {
         question: 'Which of the following best describes JavaScript?',
         answers: ['a low-level programming language.','a scripting language precompiled in the browser.','a compiled scripting language.','an object-oriented scripting language.'],
@@ -84,6 +84,7 @@ function compare(event) {
     if (element.matches("li")) {
 
         var createDiv = document.createElement("div");
+        createDiv.setAttribute("id", "createDiv");
 
         if (element.textContent == questions[questionsIndex].answer) {
             score++;

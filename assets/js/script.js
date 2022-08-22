@@ -104,3 +104,77 @@ function compare(event) {
     }
     questionsDiv.appendChild(createDiv);
 }
+
+// Completed Quiz
+function quizComplete() {
+    questionsDiv.innerHTML = "";
+    currentTime.innerHTML = "";
+
+    var createHeading = document.createElement("h1");
+    createHeading.setAttribute("id","createHeading");
+    createHeading,textContent = "COMPLETE";
+
+    questionsDiv.appendChild(createHeading);
+
+    var createPara = document.createElement("p");
+    createPara.setAttribute("id", "createPara");
+
+    questionsDiv.appendChild(createPara);
+
+    if (secondsRemaining >=0) {
+        var timeRemaining = secondsRemaining;
+        var createPara2 = document.createElement("p");
+        clearInterval(holdInterval);
+        createPara.textContent = "Your final score is: " + timeRemaining;
+
+        questionsDiv.appendChild(createPara2);
+    }
+
+    var createLabel = document.createElement("label");
+    createLabel.setAttribute("id", "createLabel");
+    createLabel.textContent = "Enter Your Initials: ";
+
+    questionsDiv.appendChild(createLabel);
+
+    var createInput = document.createElement("input");
+    createInput.setAttribute("type", "text");
+    createInput.setAttribute("id", "initials");
+    createInput.textContent = "";
+
+    questionsDiv.appendChild(createInput);
+
+    var createSubmit = document.createElement("button");
+    createSubmit.setAttribute("type", "submit");
+    createSubmit.setAttribute("id", "Submit");
+    createSubmit.textContent = "Submit";
+
+    questionsDiv.appendChild(createSubmit);
+
+    createSubmit.addEventListener("click", function () {
+        var initials = createInput.value;
+
+        if (initials === null) {
+
+            console.log("No value entered!");
+
+        } else {
+            var finalScore = {
+                initials: initials,
+                score: timeRemaining
+            }
+            console.log(finalScore);
+            var allScores = localStorage.getItem("allScores");
+            if (allScores === null) {
+                allScores = [];
+            } else {
+                allScores = JSON.parse(allScores);
+            }
+            allScores.push(finalScore);
+            var newScore = JSON.stringify(allScores);
+            localStorage.setItem("allScores", newScore);
+            // Travels to final page
+            window.location.replace("./HighScores.html");
+        }
+    });
+
+}

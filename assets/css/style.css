@@ -1,60 +1,86 @@
-        
-        #wrapper {
-            position: absolute;
-            left: 30%;
-            top: 20%;
-            width: 500px;
-            height: 500px;
-            padding: 10px;
-            border: 5px solid blue;
-            border-radius: 15px;
-        }
-        #startQuiz {
-            background-color: blue;
-            margin-left: 33%;
-            padding: 15px 32px;
-            font-size: 20px;
-            color: white;
-            border-radius: 15px;
+ #wrapper {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    border: 5px solid blue;
+    border-radius: 15px;
+}
 
-        }
-        #questionsDiv {
-            margin: 20px;
-        }
+#startQuiz {
+    background-color: blue;
+    margin-left: 33%;
+    padding: 15px 32px;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
 
-        #countdown-timer {
-            float: right;
-        }
+}
 
-        #createDiv {
-            margin-top: 20px;
-            border-top: 1px solid lightgray;
-        }
+#questionsDiv {
+    margin: 20px;
+}
 
-        input {
-            margin-bottom: 20px;
-            width: 50%;
-            border: 1px solid lightgray;
-        }
+#countdown-timer {
+    float: right;
+}
 
-        h1 {
-            text-align: center;
-        }
+#createDiv {
+    margin-top: 20px;
+    border-top: 1px solid lightgray;
+}
 
-        li {
-            background-color: blue;
-            margin-top: 10px;
-            padding: 5px 15px;
-            width: 80%;
-            font-size: 18px;
-            color: white;
-        }
+input {
+    margin-bottom: 20px;
+    width: 50%;
+    border: 1px solid lightgray;
+}
 
-        #Submit {
-            background-color: blue;
-            margin-left: 33%;
-            padding: 15px 32px;
-            font-size: 20px;
-            color: white;
-        }
+h1 {
+    text-align: center;
+}
 
+li {
+    background-color: blue;
+    margin-top: 10px;
+    padding: 5px 15px;
+    width: 80%;
+    font-size: 18px;
+    color: white;
+}
+
+#Submit {
+    background-color: blue;
+    margin-left: 33%;
+    padding: 15px 32px;
+    font-size: 20px;
+    color: white;
+}
+
+#goBack {
+    background-color: purple;
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    top: 30%;
+    left: 55%;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+#clear {
+    background-color: purple;
+    position: relative;
+    padding: 10px;
+     font-size: 20px;
+    color: white;
+    top: 30%;
+    right: 5%;
+    text-align: center;
+}        

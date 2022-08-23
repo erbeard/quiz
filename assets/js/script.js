@@ -27,17 +27,17 @@ var questions = [
         answers: ['Select','If','Switch','For'],
         answer: 'If' 
     }, {
-        question: 'HTML stands for',
-        answers: ['HighText Machine Language','HyperText and links Markup Language','SwitcHyperText Markup Language','None of these'],
-        answer: 'None of these'
+        question: 'Which built-in method calls a function for each element in the array?',
+        answers: ['while()','loop()','forEach()','None of the above'],
+        answer: 'forEach()'
     }, {
-        question: 'Which of the following tag is used for inserting the largest heading in HTML?',
-        answers: ['<h3>','<h1>','<h5>','<h6>'],
-        correct_index: '<h1>'
+        question: 'For strict equality comparisons, we should use:',
+        answers: ['=','==','===','===='],
+        answer: '==='
     }, {
-        question: 'How to create an ordered list (a list with the list items in numbers) in HTML?',
-        answers: ['<ul>','<ol>','<li>','<i>'],
-        correct_index: '<ol>'
+        question: 'The expression 8 > 8 evaluates to:',
+        answers: ['True','False'],
+        answer: 'False'
     },
 ];
 
@@ -59,13 +59,13 @@ timer.addEventListener("click", function() {
 });
 
 //Renders Questions to Page
-    function render(questionIndex) { 
+    function render(questionsIndex) { 
         questionsDiv.innerHTML = "";
         ulCreate.innerHTML = "";
 
         for (var i = 0; i < questions.length; i++) {
-            var userQuestion = questions[questionIndex].question;
-            var userAnswers = questions[questionIndex].answers;
+            var userQuestion = questions[questionsIndex].question;
+            var userAnswers = questions[questionsIndex].answers;
             questionsDiv.textContent = userQuestion;
         }
         userAnswers.forEach(function (newItem) {
@@ -101,7 +101,7 @@ function compare(event) {
         quizComplete();
         createDiv.textContent = "End of Quiz" + " " + "You got  " + score + "/" + questions.length + " Correct!";
     } else {
-        render(questionIndex);
+        render(questionsIndex);
     }
     questionsDiv.appendChild(createDiv);
 }
@@ -173,7 +173,7 @@ function quizComplete() {
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
-            // Travels to final page
+            // Navigate to final page
             window.location.replace("./HighScores.html");
         }
     });
